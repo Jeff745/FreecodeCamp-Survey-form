@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Eczar&display=swap");
+
+
+body{
+    background-color: hsla(197, 86%, 46%, 0.692);
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.2em;
+    max-width: 1000px;
+    position:inherit;
+    text-align: center;
+
+}
+
+#container{
+
+    background-color: white;
+    border: 2px solid black;
+
+
+
+}
+
+#survey-form{
+    font-family: 'Eczar', serif;
+
+}
+
+#title,#description{
+
+    font-family: 'Alegreya', serif;
+
+}
+
+/* .input-checkbox,textarea,select,input:invalid,.recommendation{
+    border-color: #900;
+    background-color: #fdd;
+    box-shadow: 0 0 5px 1px red;
+
+
+} */
+
+#qns{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 700;
+
+}
+
+#comments-suggestions{
+    height: 100px;
+    width:50%;
+    padding: 10px 25px;
+
+
+}
+
+input[type=text],input[type=email],input[type=number],select,textarea{
+height: 5%;
+width: 15%;
+padding: 8px 10px;
+border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,select:focus,textarea:focus{
+   
+    border: 3px solid orange;
+    }
+
+

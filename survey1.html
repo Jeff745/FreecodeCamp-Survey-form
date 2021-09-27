@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="text/javascript" language="javascript" src="validate.js"></script>
+<title>FreeCodeCamp Survey</title>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+        <h1 id="title">FreeCodeCamp Survey Form</h1>
+
+    <div id="container">
+
+    
+    <p style="font-size: medium;" id="description"> Please spend some time to help us to fill up this survey form to improve our platform.</p>
+
+
+    <form id="survey-form">
+
+        <div id="form-grp">
+            <label id="name-label" for="Name">Name</label><br>
+            <input type="text" id="name" name="Name" value="" placeholder="Enter your name" required><br><br>
+            <span class="error_form" id="error"></span>
+
+        </div>
+
+        <div id="form-grp">
+            <label id="email-label" for="Email">Email</label><br>
+            <input type="email" id="email" name="Email" value="" placeholder="Enter your Email" required><br><br>
+            <span class="error_form" id="error"></span>
+
+        </div>
+
+
+        <div id="form-grp">
+            <label for="number-label">Age(Optional)</label><br>
+            <input type="number" id="number" name="number" value="" placeholder="Enter your Age" min="12" max="99"><br><br>
+
+        </div>
+
+        <div id="form-grp">
+            <p>Which option best describes your current role?</p><br>
+            <select id="dropdown" name="favourite" class="formctrl">
+                <option disabled selected value="Select Current role">Select current Role</option>
+                <option value="Student">Student</option>
+                <option value="Full Time Job">Full Time Job</option>
+                <option value="Full Time Learner">Full Time Learner</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+                <option value="Other">Other</option>
+
+            </select>
+            <span class="error_form" id="error"></span>
+
+        </div>
+
+        <div id="form-grp">
+            <p>Would you recommend freeCodeCamp to a friend?</p><br>
+            <input type="radio" id="recommendation" name="user-recommendation" value="definitely" checked="checked" required>
+            <label for="definitely">Definitely</label><br>
+            <input type="radio" id="recommendation" name="user-recommendation" value="maybe">
+            <label for="maybe">Maybe</label><br>
+            <input type="radio" id="recommendation" name="user-recommendation" value="not-sure">
+            <label for="not-sure">Not Sure</label><br>
+
+            <span class="error_form" id="error"></span>
+
+        </div>
+
+
+        <div id="form-grp">
+            <p>What is your favourite feature of freeCodeCamp?</p>
+            <select id="dropdown" name="role" class="formctrl">
+                <option disabled selected value="Select an option">Select an option</option>
+                <option value="Challenges">Challenges</option>
+                <option value="Projects">Projects</option>
+                <option value="Community">Community</option>
+                <option value="Open Source">Source</option>
+
+            </select>
+            <span class="error_form" id="error"></span>
+
+        </div>
+
+        <div id="form-group">
+            <p>What would you like to see improved?(Check all that apply)</p><br>
+            <input type="checkbox" name="improvement" value="front-end-projects" class="input-checkbox">
+            <label for="Front-End Projects">Front-End Projects</label>
+            <input type="checkbox" name="improvement" value="back-end-projects" class="input-checkbox">
+            <label for="back-End Projects">Back-End Projects</label>
+            <input type="checkbox" name="improvement" value="data-visualisation" class="input-checkbox">
+            <label for="data-visualisation">Data-Visualisation</label>
+            <input type="checkbox" name="improvement" value="Challenges" class="input-checkbox">
+            <label for="Challenges">Challenges</label>
+            <input type="checkbox" name="improvement" value="open-source-community" class="input-checkbox">
+            <label for="open-source-community">Open Source Community</label>
+            <input type="checkbox" name="improvement" value="Gitter-help-rooms" class="input-checkbox">
+            <label for="Gitter-help-rooms">Gitter help rooms</label>
+            <input type="checkbox" name="improvement" value="Videos" class="input-checkbox">
+            <label for="Videos">Videos</label>
+            <input type="checkbox" name="improvement" value="City-Meetups" class="input-checkbox">
+            <label for="City-Meetups">City Meetups</label>
+            <input type="checkbox" name="improvement" value="Wiki" class="input-checkbox">
+            <label for="Wiki">Wiki</label>
+            <input type="checkbox" name="improvement" value="Forum" class="input-checkbox">
+            <label for="Forum">Forum</label>
+            <input type="checkbox" name="improvement" value="Additional-Courses" class="input-checkbox">
+            <label for="Additional-Courses">Additional Courses</label>
+
+
+            <span class="error_form" id="error"></span>
+        </div>
+
+        <div id="form-grp">
+            <div id="qns">
+                <p>What Programming language would you like to learn?</p>
+            </div>
+            <input type="checkbox" name="language" value="C++" class="input-checkbox">
+            <label for="C++">C++</label>
+            <input type="checkbox" name="language" value="Java" class="input-checkbox">
+            <label for="Java">Java</label>
+            <input type="checkbox" name="language" value="Python" class="input-checkbox">
+            <label for="Python">Python</label>
+            <input type="checkbox" name="language" value="SQL" class="input-checkbox">
+            <label for="SQL">SQL</label>
+            <input type="checkbox" name="language" value="Javascript" class="input-checkbox">
+            <label for="Javascript">Javascript</label>
+            <input type="checkbox" name="language" value="Ruby" class="input-checkbox">
+            <label for="Ruby">Ruby</label>
+            <input type="checkbox" name="language" value="PHP" class="input-checkbox">
+            <label for="PHP">PHP</label>
+            <input type="checkbox" name="language" value="Others" class="input-checkbox">
+            <label for="Others">Others</label>
+
+
+        </div>
+
+        <div id="form-grp">
+            <p>Any Comments or Suggestions</p><br>
+            <textarea id="comments-suggestions" name="comments-suggestions" class="comments-suggestions"
+                placeholder="Enter your comments here..." required></textarea>
+
+                <span class="error_form" id="error"></span>
+
+
+        </div>
+
+        <div id="form-grp">
+            <input type="submit" value="Submit">
+        </div>
+
+
+    </form>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
