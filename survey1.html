@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="text/javascript" language="javascript" src="validate.js"></script>
+<!-- <script language="javascript" src="validate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <title>FreeCodeCamp Survey</title>
 
 <head>
     <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
 
 </head>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <body>
 
@@ -15,20 +20,24 @@
     <div id="container">
 
     
-    <p style="font-size: medium;" id="description"> Please spend some time to help us to fill up this survey form to improve our platform.</p>
+    <p style="font-size: large;" id="description"> Please spend some time to help us to fill up this survey form to improve our platform.</p>
 
 
-    <form id="survey-form">
+    <form id="survey-form" action="survey_submitted.html">
 
         <div id="form-grp">
-            <label id="name-label" for="Name">Name</label><br>
+            <div id="qns">
+                <label id="name-label" for="Name">Name</label><br>
+            </div>
             <input type="text" id="name" name="Name" value="" placeholder="Enter your name" required><br><br>
             <span class="error_form" id="error"></span>
 
         </div>
 
         <div id="form-grp">
-            <label id="email-label" for="Email">Email</label><br>
+            <div id="qns">
+                <label id="email-label" for="Email">Email</label><br>
+            </div>
             <input type="email" id="email" name="Email" value="" placeholder="Enter your Email" required><br><br>
             <span class="error_form" id="error"></span>
 
@@ -36,15 +45,20 @@
 
 
         <div id="form-grp">
-            <label for="number-label">Age(Optional)</label><br>
-            <input type="number" id="number" name="number" value="" placeholder="Enter your Age" min="12" max="99"><br><br>
+            <div id="qns">
+                <label id="number-label" for="number">Age(Optional)</label><br>
+            </div>
+            <input type="number" id="number" name="number" value="" placeholder="Enter your Age" min="12" max="99"><br>
 
         </div>
 
         <div id="form-grp">
-            <p>Which option best describes your current role?</p><br>
-            <select id="dropdown" name="favourite" class="formctrl">
-                <option disabled selected value="Select Current role">Select current Role</option>
+            <div id="qns">
+                <p>Which option best describes your current role?</p>
+
+            </div>
+            <select id="dropdown" name="favourite" class="formctrl" required><br><br>
+                <option disabled selected value="">Select current Role</option>
                 <option value="Student">Student</option>
                 <option value="Full Time Job">Full Time Job</option>
                 <option value="Full Time Learner">Full Time Learner</option>
@@ -57,8 +71,10 @@
         </div>
 
         <div id="form-grp">
-            <p>Would you recommend freeCodeCamp to a friend?</p><br>
-            <input type="radio" id="recommendation" name="user-recommendation" value="definitely" checked="checked" required>
+            <div id="qns">
+                 <p>Would you recommend freeCodeCamp to a friend?</p>
+            </div>
+            <input type="radio" id="recommendation" name="user-recommendation" value="definitely" required>
             <label for="definitely">Definitely</label><br>
             <input type="radio" id="recommendation" name="user-recommendation" value="maybe">
             <label for="maybe">Maybe</label><br>
@@ -71,9 +87,12 @@
 
 
         <div id="form-grp">
-            <p>What is your favourite feature of freeCodeCamp?</p>
-            <select id="dropdown" name="role" class="formctrl">
-                <option disabled selected value="Select an option">Select an option</option>
+            <div id="qns">
+                <p>What is your favourite feature of freeCodeCamp?</p>
+
+            </div>
+            <select id="dropdown" required>
+                <option disabled selected value="">Select an option</option>
                 <option value="Challenges">Challenges</option>
                 <option value="Projects">Projects</option>
                 <option value="Community">Community</option>
@@ -85,32 +104,34 @@
         </div>
 
         <div id="form-group">
-            <p>What would you like to see improved?(Check all that apply)</p><br>
-            <input type="checkbox" name="improvement" value="front-end-projects" class="input-checkbox">
+            <div id="qns">
+                 <p>What would you like to see improved?(Check those that apply)</p>
+            </div>
+            <input type="checkbox" name="improvement" id="improvement" value="front-end-projects" class="input-checkbox">
             <label for="Front-End Projects">Front-End Projects</label>
-            <input type="checkbox" name="improvement" value="back-end-projects" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="back-end-projects" class="input-checkbox">
             <label for="back-End Projects">Back-End Projects</label>
-            <input type="checkbox" name="improvement" value="data-visualisation" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="data-visualisation" class="input-checkbox">
             <label for="data-visualisation">Data-Visualisation</label>
-            <input type="checkbox" name="improvement" value="Challenges" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Challenges" class="input-checkbox">
             <label for="Challenges">Challenges</label>
-            <input type="checkbox" name="improvement" value="open-source-community" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="open-source-community" class="input-checkbox">
             <label for="open-source-community">Open Source Community</label>
-            <input type="checkbox" name="improvement" value="Gitter-help-rooms" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Gitter-help-rooms" class="input-checkbox">
             <label for="Gitter-help-rooms">Gitter help rooms</label>
-            <input type="checkbox" name="improvement" value="Videos" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Videos" class="input-checkbox">
             <label for="Videos">Videos</label>
-            <input type="checkbox" name="improvement" value="City-Meetups" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="City-Meetups" class="input-checkbox">
             <label for="City-Meetups">City Meetups</label>
-            <input type="checkbox" name="improvement" value="Wiki" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Wiki" class="input-checkbox">
             <label for="Wiki">Wiki</label>
-            <input type="checkbox" name="improvement" value="Forum" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Forum" class="input-checkbox">
             <label for="Forum">Forum</label>
-            <input type="checkbox" name="improvement" value="Additional-Courses" class="input-checkbox">
+            <input type="checkbox" name="improvement" id="improvement" value="Additional-Courses" class="input-checkbox">
             <label for="Additional-Courses">Additional Courses</label>
 
 
-            <span class="error_form" id="error"></span>
+            <span class="error_form" id="improvement_error"></span>
         </div>
 
         <div id="form-grp">
@@ -138,7 +159,9 @@
         </div>
 
         <div id="form-grp">
-            <p>Any Comments or Suggestions</p><br>
+            <div id="qns">
+                 <p>Any Comments or Suggestions</p>
+            </div>
             <textarea id="comments-suggestions" name="comments-suggestions" class="comments-suggestions"
                 placeholder="Enter your comments here..." required></textarea>
 
@@ -148,7 +171,7 @@
         </div>
 
         <div id="form-grp">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="submit" onclick="validate_improvement">
         </div>
 
 
